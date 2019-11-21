@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+}
+
+#clock {
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 50px;
+    color: white;
+    border-radius: 3px;
+    user-select: none;
+}
