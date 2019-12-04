@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="index.css">
     <title>Hello View</title>
 </head>
 <body>
-    <h1>Hello View ❤️</h1>
-    <div class="card">
-        <a class="item" href="./terminal/terminal.html">Terminal</a>
+    <div class="header">
+        <h1 id="title">Hello View ❤️</h1>
     </div>
-    <div class="card">
-        <a class="item" href="./digital_clock/digital_clock.html">Digital Clock</a>
+    <div class="card-container">
+        <div id="terminal" class="card">
+            <img class="card-image" src="./images/terminal.JPG" alt="terminal"/>
+            <div class="card-text">Terminal</div>
+        </div>
+        <div id="digital-clock" class="card">
+            <img class="card-image" src="./images/digital_clock.JPG" alt="digital_clock"/>
+            <div class="card-text">Digital Clock</div>
+        </div>
+        <span class="fill"></span>
+        <span class="fill"></span>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
