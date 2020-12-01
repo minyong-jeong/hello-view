@@ -1,11 +1,5 @@
-@font-face {
-    font-family: 'BMJUA';
-    src:url('../fonts/BMJUA_ttf.ttf');
-    src:url('../fonts/BMJUA_otf.otf');
-}
-
 body {
-    font-family: 'BMJUA';
+    font-family: 'Calibri';
     background-color: #fcfcfc;
 }
 
@@ -40,7 +34,7 @@ body {
 }
 
 #my-table th {
-    background-color: #86a1fc;
+    background-color: #34558b;
     color: white;
 }
 
