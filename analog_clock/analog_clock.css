@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: #c2c2c2;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-img-area {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+#profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgb(22, 22, 22);
+    opacity: 1;
+}
+
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 5px solid black;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+  
+.movement {
+    position: absolute;
+    top: 147px;
+    left: 147px;
+    width: 130px;
+    height: 6px;
+    transform-origin: 0% 50%;
+    transform: rotate(30deg);
+}
+  
+.hand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background-color: white;
+    transform-origin: 0% 50%;
+}
+  
+.hour > .hand {
+    width: 110px;
+    height: 10px;
+    animation: clock_movement 43200s linear infinite;
+}
+  
+.minute > .hand {
+    width: 125px;
+    height: 10px;
+    animation: clock_movement 3600s linear infinite;
+}
+  
+.second > .hand {
+    width: 130px;
+    height: 4px;
+    background-color: rgb(248, 54, 54);
+    animation: clock_movement 60s linear infinite;
+}
+ 
+@keyframes clock_movement {
+    0%   { transform: rotate(-90deg); }
+    100% { transform: rotate(270deg); }
+}
