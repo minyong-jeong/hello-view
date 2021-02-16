@@ -38,9 +38,21 @@
     height: 15px;
     background: #d3d3d3;
     outline: none;
-    opacity: 0.7;
     transition: .2s;
     transition: opacity .2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#red {
+    background: linear-gradient(45deg, white, red);
+}
+
+#green {
+    background: linear-gradient(45deg, white, green);
+}
+
+#blue {
+    background: linear-gradient(45deg, white, blue);
 }
 
 .slider::-webkit-slider-thumb {

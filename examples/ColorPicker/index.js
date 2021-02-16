@@ -12,10 +12,8 @@ const rgbToHex = () => {
 }
 
 const colorChange = () => {
-    document.getElementById("hex-text").innerHTML = "Hex (" + rgbToHex() + ")";
-    document.getElementById("red-label").innerHTML = "R (" + red + ")";
-    document.getElementById("green-label").innerHTML = "G (" + green + ")";
-    document.getElementById("blue-label").innerHTML = "B (" + blue + ")";
+    document.getElementById("hex-text").innerHTML = "HEX (" + rgbToHex() + ")";
+    document.getElementById("rgb-text").innerHTML = "RGB (" + red + ", " + green + ", " + blue + ")";
     box.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
 }
 
