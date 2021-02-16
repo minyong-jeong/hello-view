@@ -1,42 +1,28 @@
 const box = document.getElementById("box");
-const redInput = document.getElementById("red");
-const greenInput = document.getElementById("green");
-const blueInput = document.getElementById("blue");
-let red = 0;
-let green = 0;
-let blue = 0;
+const red = document.getElementById("red");
+const green = document.getElementById("green");
+const blue = document.getElementById("blue");
 
 const rgbToHex = () => {
-    const rgb = (red << 16) | (green << 8) | (blue << 0);
+    const rgb = (red.value << 16) | (green.value << 8) | (blue.value << 0);
     return '#' + (0x1000000 + rgb).toString(16).slice(1);
 }
 
 const colorChange = () => {
     document.getElementById("hex-text").innerHTML = "HEX (" + rgbToHex() + ")";
-    document.getElementById("rgb-text").innerHTML = "RGB (" + red + ", " + green + ", " + blue + ")";
-    box.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
+    document.getElementById("rgb-text").innerHTML = "RGB (" + red.value + ", " + green.value + ", " + blue.value + ")";
+    box.style.backgroundColor = "rgb(" + red.value + "," + green.value + "," + blue.value + ")";
 }
 
 const randomColor = () => {
-    redInput.value = red = Math.floor(Math.random() * 256);
-    greenInput.value = green = Math.floor(Math.random() * 256);
-    blueInput.value = blue = Math.floor(Math.random() * 256);
+    red.value = Math.floor(Math.random() * 256);
+    green.value = Math.floor(Math.random() * 256);
+    blue.value = Math.floor(Math.random() * 256);
 }
 
-redInput.addEventListener("input", (e) => {
-    red = redInput.value;
-    colorChange();
-});
-
-greenInput.addEventListener("input", (e) => {
-    green = greenInput.value;
-    colorChange();
-});
-
-blueInput.addEventListener("input", (e) => {
-    blue = blueInput.value;
-    colorChange();
-});
+red.addEventListener("input", () => colorChange());
+green.addEventListener("input", () => colorChange());
+blue.addEventListener("input", () => colorChange());
 
 window.onload = () => {
     randomColor();
