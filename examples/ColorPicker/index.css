@@ -28,11 +28,7 @@
     margin-top: 5px;
 }
 
-.sliderBox h4 {
-    margin-bottom: 2px;
-}
-
-.slider {
+.control > .sliderBox > .slider {
     -webkit-appearance: none;
     width: 100%;
     height: 15px;
@@ -55,7 +51,7 @@
     background: linear-gradient(45deg, white, blue);
 }
 
-.slider::-webkit-slider-thumb {
+.control > .sliderBox > .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 15px;
@@ -64,7 +60,7 @@
     cursor: pointer;
 }
 
-.slider::-moz-range-thumb {
+.control > .sliderBox > .slider::-moz-range-thumb {
     width: 15px;
     height: 15px;
     background: black;
